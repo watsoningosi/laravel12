@@ -54,18 +54,13 @@ class PostsController extends Controller
      */
     public function store()
     {
-        request()->validate([
+        Posts::create(request()->validate([
             'title' => 'required',
             'body' => 'required'
 
-        ]);
-        $post = new Posts();
-        $post->title = request('title');
-        $post->body = request('body');
+        ]));
 
-        $post->save();
-
-        return redirect('/posts');
+        return redirect(route('posts'));
     }
 
     /**
@@ -101,16 +96,12 @@ class PostsController extends Controller
      */
     public function update(Posts $post)
     {
-        request()->validate([
+        $post->update(request()->validate([
             'title' => 'required',
             'body' => 'required'
-        ]);
+        ]));
 
-        $post->title = request('title');
-        $post->body = request('body');
-        $post->save();
-
-        return redirect('details/' . $post->id);
+        return redirect(route('details', $post));
     }
 
     /**

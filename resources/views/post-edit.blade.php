@@ -40,8 +40,7 @@
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <fieldset>
-                                                        <button type="submit" id="form-submit" class="main-button">Update/
-                                                            Article</button>
+                                                        <button type="submit" id="form-submit" class="main-button">Update Post</button>
                                                     </fieldset>
                                                 </div>
                                             </div>

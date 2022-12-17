@@ -12,7 +12,7 @@
                                     <img src="assets/images/blog-post-03.jpg" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <a href="/details/{{ $post->id }}">
+                                    <a href="{{ route('details' ,$post) }}">
                                         <h4>{{ $post->title }}</h4>
                                     </a>
                                     <p>{{ Illuminate\Support\Str::limit($post->body, 200) }}</p>

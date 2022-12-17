@@ -40,9 +40,9 @@ return view  ('posts', [
 
 */
 
-Route::get('/details/{post}', 'App\Http\Controllers\PostsController@show');
+Route::get('/details/{post}', 'App\Http\Controllers\PostsController@show')->name('details');
 Route::get('/', 'App\Http\Controllers\PostsController@index');
-Route::get('/posts', 'App\Http\Controllers\PostsController@index1');
+Route::get('/posts', 'App\Http\Controllers\PostsController@index1')->name('posts');
 Route::post('/posts ', 'App\Http\Controllers\PostsController@store');
 Route::get('/posts/create', 'App\Http\Controllers\PostsController@create');
 Route::get('/posts/edit/{post}', 'App\Http\Controllers\PostsController@edit');
